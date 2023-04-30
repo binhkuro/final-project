@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 	<head>
-		<title>Please Log In</title>
+		<title>SPRING COMMERCE | Sign In</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	</head>
     <style>
@@ -41,20 +41,20 @@
                               <span class="img-logo h1 fw-bold mb-0"><img class="logo" src="../images/logo.png" alt="logo"></span>
                             </div>
           
-                            <h5 class="fw-normal mb-1 pb-3" style="letter-spacing: 1px; font-size: 28px; color: brown;">Login your account</h5>
+                            <h5 class="fw-normal mb-1 pb-3" style="letter-spacing: 1px; font-size: 28px; color: brown;">Login to SPRING COMMERCE</h5>
           
                             <div class="form-outline mb-4">
-                              <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="Email" name="username"/>
+                              <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="Enter your email" name="username"/>
                             </div>
           
                             <div class="form-outline mb-4">
-                              <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="Password" name="password"/>
+                              <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="Enter your password" name="password"/>
                             </div>
           
                             <div class="pt-1 mb-4">
                             	
-                              <input class="btn btn-dark btn-lg btn-block" type="submit" value="Login">
-                              <a class="btn btn-dark btn-lg btn-block" href="/admin/login" >Login as administrator</a>
+                              <input class="btn btn-success btn-lg btn-block" type="submit" value="Login">
+                               <a class="btn ml-3 btn-success btn-lg btn-block " href="/admin/login" >Login as administrator</a>
                             </div>
                             
                             <!--Error-->
@@ -63,7 +63,8 @@
 							<div th:if="${param.logout}">
 								You have been logged out.</div>
           
-                            <a class="small text-primary" href="#!">Forget Password?</a>
+                            <a class="text-primary" href="#!">Forget Password?</a>
+                           
                             <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have account? <a th:href="@{/register}" class="text-primary">Sign up</a></p>
                           </form>
                         </div>

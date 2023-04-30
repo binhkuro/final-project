@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 24, 2023 lúc 09:37 AM
+-- Thời gian đã tạo: Th4 30, 2023 lúc 03:40 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -42,20 +42,9 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `userid`, `productid`, `image`, `name`, `quantity`, `price`) VALUES
-(1, 7, 36, 'images/36_quanshortkesoc.jpg', 'QUẦN SHORT KẺ SỌC', 1, 699),
-(2, 7, 6, 'images/8_somitaydai.jpg', 'SƠ MI TAY DÀI', 1, 450),
-(3, 7, 11, 'images/6_aokhoaccotton.jpg', 'ÁO KHOÁC COTTON', 2, 650),
-(4, 7, 17, 'images/17_tuitote.jpg', 'TÚI TOTE', 1, 200),
-(5, 5, 40, 'images/40_quanboinam.jpg', 'QUẦN BƠI NAM', 1, 269),
-(6, 5, 47, 'images/47_polonam.jpg', 'POLO NAM ', 1, 1000),
-(7, 5, 6, 'images/8_somitaydai.jpg', 'SƠ MI TAY DÀI', 1, 450),
-(8, 6, 45, 'images/45_quannamchinos.jpg', 'QUẦN NAM CHINOS', 2, 1800),
-(9, 6, 4, 'images/5_aopolo.jpg', 'ÁO POLO ĐEN', 1, 399),
-(10, 2, 50, 'images/50_khoacgionam.jpg', 'ÁO KHOÁC GIÓ NAM', 1, 2500),
-(11, 2, 4, 'images/5_aopolo.jpg', 'ÁO POLO ĐEN', 1, 399),
-(12, 4, 7, 'images/10_damchua.jpg', 'ĐẦM CHỮ A', 1, 550),
-(13, 4, 14, 'images/14_depsandal.jpg', 'DÉP SANDAL', 1, 469),
-(14, 4, 17, 'images/17_tuitote.jpg', 'TÚI TOTE', 1, 200);
+(47, 6, 3, 'images/3_derby.jpg', 'COUNTRY DERBY', 1, 650),
+(48, 11, 8, 'images/8_sneaker.jpg', 'CLASSIC SNEAKER', 1, 800),
+(49, 11, 3, 'images/3_derby.jpg', 'COUNTRY DERBY', 1, 650);
 
 -- --------------------------------------------------------
 
@@ -71,18 +60,6 @@ CREATE TABLE `orders` (
   `price` varchar(20) NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'chờ xác nhận'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Đang đổ dữ liệu cho bảng `orders`
---
-
-INSERT INTO `orders` (`id`, `ido`, `phone`, `location`, `price`, `status`) VALUES
-(1, 7, '0942563747', '142, Thong Nhat Street, Cluster 1, Ward 5, Bac Lieu City', '699.0', 'Chờ xác nhận'),
-(2, 5, '0524675832', '885, Le Dai Hanh Street, District 2, Binh Dinh City', '1.269.0', 'Chờ xác nhận'),
-(3, 6, '0123456789', '19, Nguyen Huu Tho, Tan Phong Ward, District 7, Ho Chi Minh City', '3.600.0', 'Chờ xác nhận'),
-(4, 2, '0903087036', '528, Duong Ba Trac, Tran Dai Nghia Ward, District 3, Ho Chi Minh City', '2.500.0', 'Chờ xác nhận'),
-(5, 4, '0968443222', '336, Nguyen Thuong Hien, Ward 5, District Binh Thanh, Quang Nam Province', '1.219.0', 'Chờ xác nhận'),
-(6, 3, '0837008012', '01/2, Cluster 3, Ward 7, Bac Lieu City', '1.810.0', 'Chờ xác nhận');
 
 -- --------------------------------------------------------
 
@@ -153,10 +130,10 @@ INSERT INTO `products` (`id`, `image`, `name`, `price`, `description`) VALUES
 (48, 'images/48_socks.jpg', 'CLASSIC SOCKS BROWN', 51, 'Tất nam cao cổ chất lượng với chất liệu cotton thấm hút tốt và mang lại cảm giác thoáng cho chân'),
 (49, 'images/49_socks.jpg ', 'CLASSIC RIBBED SOCK', 51, 'Tất dài nam tại cửa hàng với chất liệu cotton thấm hút tốt và mang lại cảm giác thoáng cho chân'),
 (50, 'images/50_wallet.jpg ', 'G. BI-FOLD WALLET ', 330, 'Một trong những món phụ kiện không thể thiếu - ví nam đẹp GROSSS BI-FOLD WALLET mới ra mắt'),
-(51, 'images/51_bag.jpg ', 'JAMES GOLF POUCH', 870, 'Một trong những món phụ kiện không thể thiếu - ví nam JAMES GOLF POUCH mới ra mắt '),
+(51, 'images/51_bag.jpg ', 'TÚI', 875, '13256456'),
 (52, 'images/52_gift.jpg ', 'GIFT CARD 1', 800, 'Thiết kế nhỏ gọn, tiện lợi. Màu sắc sang trọng và được đóng gói chỉn chu để làm quà tặng giảm giá'),
 (53, 'images/53_gift.jpg ', 'GIFT CARD 2', 900, 'Thiết kế nhỏ gọn, tiện lợi. Màu sắc sang trọng và được đóng gói chỉn chu để làm quà tặng giảm giá'),
-(54, 'images/54_gift.jpg', 'GIFT CARD 3 ', 950, 'Thiết kế nhỏ gọn, tiện lợi. Màu sắc sang trọng và được đóng gói chỉn chu để làm quà tặng giảm giá');
+(55, 'images/17_sneaker.jpg', 'ABCD', 123, 'ABCDEFGH');
 
 -- --------------------------------------------------------
 
@@ -182,7 +159,10 @@ INSERT INTO `users` (`id`, `email`, `password`, `name`) VALUES
 (4, 'user@gmail.com', '$2a$10$iNTYmlKZcqlBSKIhRFDw5u.9GTt3u61YtqIEJ0LgFASFcPTew.DM.', 'User Spring Commerce'),
 (5, 'huhu@gmail.com', '$2a$10$2moBorf8EZCEJntG80y5s.dYrGsH92cipthZUmdVTjmabsGtf1poK', 'Tôi Là Bình'),
 (6, 'binhnguyencao@gmail.com', '$2a$10$ERDp.JSjdryhTH6d6D13UeiqznRjZXPuAY8uPSO7erVQDZ8ExGrqi', 'Bình Kao'),
-(7, 'toilatho@gmail.com', '$2a$10$oidnGOqFDe0hXEFQYYPwq.T3gQ9/F3jjMD3DHWhKSW1lmqw4kmbSy', 'Thỏ Con');
+(7, 'toilatho@gmail.com', '$2a$10$oidnGOqFDe0hXEFQYYPwq.T3gQ9/F3jjMD3DHWhKSW1lmqw4kmbSy', 'Thỏ Con'),
+(8, 'caobinh12@Gmail.com', '$2a$10$88IKybGsOsYvi39yhExU6uA8CbhQVsTQSXEhmMQLsEfrlRlCUe0uq', 'caobinh12@gmail.com'),
+(9, 'ABCD@gmail.com', '$2a$10$aNNk.d4HwIQcfe87egrXse/3yGEMFlbIqjSRnLlmB71o/J3c44XAe', 'Tôi Là Bình'),
+(10, 'binhcao@gmail.com', '$2a$10$8/d9n6syV9wThI5jHqGybux0mNFBC5JwCZdGSx/cfUk..tm5Gd3kO', 'Bình bình ');
 
 -- --------------------------------------------------------
 
@@ -207,7 +187,8 @@ INSERT INTO `user_response` (`name`, `email`, `topic`, `content`, `id`) VALUES
 ('User 123', 'user@gmail.com', 'Tôi cần hỗ trợ thanh toán', 'Hey, tôi có thể thanh toán bằng cách nào', 2),
 ('Cao Nguyên Bình', 'caonguyenbinh12@gmail.com', 'Hệ thống rất tốt', 'Tôi sẽ sử dụng lâu dài hệ thống này', 3),
 ('HSHDSHD', 'huhu@gmail.com', 'Đây là bài tập giữa kì', 'Giữa kì Spring Boot', 4),
-('Thỏ Con', 'toilatho@gmail.com', 'Tối ưu giao diện giữa kì', 'Đã tối ưu giao diện, tôi rất hài lòng', 5);
+('Thỏ Con', 'toilatho@gmail.com', 'Tối ưu giao diện giữa kì', 'Đã tối ưu giao diện, tôi rất hài lòng', 5),
+('Cao Nguyên Bình', 'nguyenbinh12@Gmail.com', 'Hệ thống rất tốt', 'abcd ádui ovhnfoivnhioer ádasdq', 9);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -253,31 +234,31 @@ ALTER TABLE `user_response`
 -- AUTO_INCREMENT cho bảng `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `user_response`
 --
 ALTER TABLE `user_response`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

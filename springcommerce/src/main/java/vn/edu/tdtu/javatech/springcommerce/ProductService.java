@@ -49,7 +49,7 @@ public class ProductService {
         return (List<Product>) repo.findBySneaker();
     }
     
-    public List<Product> findByMoonkstrap() {
+    public List<Product> findByMonkstrap() {
         return (List<Product>) repo.findByMonkstrap();
     }
     

@@ -1,12 +1,8 @@
 package vn.edu.tdtu.javatech.springcommerce;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,7 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -354,8 +349,8 @@ public class AppController {
 	}
 	
 	@GetMapping("/products/monkstrap")
-	public String getAllMoonkstraps(Model model) {
-		List<Product> listProduct = productService.findByMoonkstrap();
+	public String getAllMonkstraps(Model model) {
+		List<Product> listProduct = productService.findByMonkstrap();
 		model.addAttribute("listProduct",listProduct);
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		if (!(authentication instanceof AnonymousAuthenticationToken)) {
@@ -525,7 +520,7 @@ public class AppController {
 	public String findByIdProduct(@PathVariable("id") Integer id, Model model) throws UserNotFoundException {
 		Product product = productService.get(id);
 		model.addAttribute("product", product);
-		return "infPro";
+		return "product_info";
 	}
 
 	@GetMapping("/shophome/{id}")

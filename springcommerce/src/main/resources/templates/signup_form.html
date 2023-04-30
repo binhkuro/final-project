@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Sign Up - CodeJava</title>
+	<title>SPRING COMMERCE | Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
 	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
@@ -56,13 +56,19 @@
                                         </div>
 
                                         <h5 class="fw-normal mb-1 pb-3 " style="letter-spacing: 1px; font-size: 28px; color: brown;">
-                                            Sign up your account</h5>
+                                            Register an account</h5>
 
 
                                         <div class="form-outline mb-4">
                                             <input type="email" th:field="*{email}" id="email" class="form-control form-control-lg"
                                                 placeholder="Enter your email" required/>
                                         </div>
+                                        
+                                        <div class="form-outline mb-4">
+                                            <input type="text" id="name" class="form-control form-control-lg"
+                                                placeholder="Enter your user name" th:field="*{name}" required/>
+                                        </div>
+										
 
                                         <div class="form-outline mb-4">
                                             <input type="password" id="pass1" class="form-control form-control-lg"
@@ -71,12 +77,7 @@
 
                                         <div class="form-outline mb-4">
                                             <input type="password" id="pass2" class="form-control form-control-lg"
-                                                placeholder="Enter your password again" required />
-                                        </div>
-										
-										<div class="form-outline mb-4">
-                                            <input type="text" id="name" class="form-control form-control-lg"
-                                                placeholder="Username" th:field="*{name}" required/>
+                                                placeholder="Comfirm your password" required />
                                         </div>
 										
                                         <div class="messageErr">
